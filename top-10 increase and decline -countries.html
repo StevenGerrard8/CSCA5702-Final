@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.28.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.18.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.24.0"></script>
+</head>
+<body>
+  <div id="vis"/>
+  <script>
+    const spec = {
+  "config": {"view": {"continuousWidth": 300, "continuousHeight": 300}},
+  "hconcat": [
+    {
+      "data": {"name": "data-7b81aaa487faa725f290749ba58bff40"},
+      "mark": {"type": "bar"},
+      "encoding": {
+        "tooltip": [
+          {"field": "country_name", "type": "nominal"},
+          {"field": "net_diff", "type": "quantitative"},
+          {"field": "wb_region", "type": "nominal"}
+        ],
+        "x": {"field": "net_diff", "type": "quantitative"},
+        "y": {"field": "country_name", "sort": "-x", "type": "nominal"}
+      },
+      "title": "Top 10 Countries that Experienced a Decline in Salary"
+    },
+    {
+      "data": {"name": "data-a7493e0a011462788acac65363a96c6e"},
+      "mark": {"type": "bar"},
+      "encoding": {
+        "tooltip": [
+          {"field": "country_name", "type": "nominal"},
+          {"field": "net_diff", "type": "quantitative"},
+          {"field": "wb_region", "type": "nominal"}
+        ],
+        "x": {"field": "net_diff", "type": "quantitative"},
+        "y": {"field": "country_name", "sort": "-x", "type": "nominal"}
+      },
+      "title": "Top 10 Countries that Experienced a Increase in Salary"
+    }
+  ],
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.17.0.json",
+  "datasets": {
+    "data-7b81aaa487faa725f290749ba58bff40": [
+      {
+        "country_name": "Mali",
+        "wb_region": "Sub-Saharan Africa ",
+        "skill_group_category": "Specialized Industry Skills",
+        "skill_group_name": "Army",
+        "net_per_10K_2015": 2824.97,
+        "net_per_10K_2016": -1479.05,
+        "net_per_10K_2017": 1906.14,
+        "net_per_10K_2018": 76.53,
+        "net_per_10K_2019": -732.6,
+        "net_diff": -3557.5699999999997
+      },
+      {
+        "country_name": "Venezuela, RB",
+        "wb_region": "Latin America & Caribbean ",
+        "skill_group_category": "Soft Skills",
+        "skill_group_name": "Flexible Approach",
+        "net_per_10K_2015": -1209.32,
+        "net_per_10K_2016": -2435.26,
+        "net_per_10K_2017": -2542.23,
+        "net_per_10K_2018": -3629.02,
+        "net_per_10K_2019": -4022.04,
+        "net_diff": -2812.7200000000003
+      },
+      {
+        "country_name": "Congo, Dem. Rep.",
+        "wb_region": "Sub-Saharan Africa ",
+        "skill_group_category": "Business Skills",
+        "skill_group_name": "Employee Learning & Development",
+        "net_per_10K_2015": 1536.42,
+        "net_per_10K_2016": 274.57,
+        "net_per_10K_2017": -85.74,
+        "net_per_10K_2018": 40.81,
+        "net_per_10K_2019": 41.62,
+        "net_diff": -1494.8000000000002
+      },
+      {
+        "country_name": "Bahrain",
+        "wb_region": "Middle East & North Africa",
+        "skill_group_category": "Specialized Industry Skills",
+        "skill_group_name": "Cooking",
+        "net_per_10K_2015": 697.84,
+        "net_per_10K_2016": 114.48,
+        "net_per_10K_2017": -617.83,
+        "net_per_10K_2018": -544.56,
+        "net_per_10K_2019": -788.85,
+        "net_diff": -1486.69
+      },
+      {
+        "country_name": "Myanmar",
+        "wb_region": "East Asia & Pacific",
+        "skill_group_category": "Business Skills",
+        "skill_group_name": "Economics",
+        "net_per_10K_2015": 1256.28,
+        "net_per_10K_2016": 814.3,
+        "net_per_10K_2017": 655.02,
+        "net_per_10K_2018": 71.11,
+        "net_per_10K_2019": -122,
+        "net_diff": -1378.28
+      },
+      {
+        "country_name": "Qatar",
+        "wb_region": "Middle East & North Africa",
+        "skill_group_category": "Specialized Industry Skills",
+        "skill_group_name": "Mining",
+        "net_per_10K_2015": 1144.24,
+        "net_per_10K_2016": 507.29,
+        "net_per_10K_2017": -288.86,
+        "net_per_10K_2018": -614.38,
+        "net_per_10K_2019": -178.47,
+        "net_diff": -1322.71
+      },
+      {
+        "country_name": "Nicaragua",
+        "wb_region": "Latin America & Caribbean ",
+        "skill_group_category": "Soft Skills",
+        "skill_group_name": "Time Management",
+        "net_per_10K_2015": 628.49,
+        "net_per_10K_2016": 130.83,
+        "net_per_10K_2017": -270.84,
+        "net_per_10K_2018": -968.88,
+        "net_per_10K_2019": -614.91,
+        "net_diff": -1243.4
+      },
+      {
+        "country_name": "Thailand",
+        "wb_region": "East Asia & Pacific",
+        "skill_group_category": "Specialized Industry Skills",
+        "skill_group_name": "Alcoholic Beverages",
+        "net_per_10K_2015": 1008.05,
+        "net_per_10K_2016": -325.82,
+        "net_per_10K_2017": -79.66,
+        "net_per_10K_2018": 286.55,
+        "net_per_10K_2019": -205.38,
+        "net_diff": -1213.4299999999998
+      },
+      {
+        "country_name": "Nigeria",
+        "wb_region": "Sub-Saharan Africa ",
+        "skill_group_category": "Business Skills",
+        "skill_group_name": "Employee Learning & Development",
+        "net_per_10K_2015": 1071.67,
+        "net_per_10K_2016": 89.22,
+        "net_per_10K_2017": -57.72,
+        "net_per_10K_2018": -98.46,
+        "net_per_10K_2019": -120.49,
+        "net_diff": -1192.16
+      },
+      {
+        "country_name": "Cuba",
+        "wb_region": "Latin America & Caribbean ",
+        "skill_group_category": "Soft Skills",
+        "skill_group_name": "Teamwork",
+        "net_per_10K_2015": -249.74,
+        "net_per_10K_2016": -420.95,
+        "net_per_10K_2017": 70.18,
+        "net_per_10K_2018": -707.4,
+        "net_per_10K_2019": -1394.09,
+        "net_diff": -1144.35
+      }
+    ],
+    "data-a7493e0a011462788acac65363a96c6e": [
+      {
+        "country_name": "Iceland",
+        "wb_region": "Europe & Central Asia",
+        "skill_group_category": "Business Skills",
+        "skill_group_name": "Employee Learning & Development",
+        "net_per_10K_2015": -2447.11,
+        "net_per_10K_2016": -459.84,
+        "net_per_10K_2017": -98.92,
+        "net_per_10K_2018": 34.67,
+        "net_per_10K_2019": -153.55,
+        "net_diff": 2293.56
+      },
+      {
+        "country_name": "Korea, Rep.",
+        "wb_region": "East Asia & Pacific",
+        "skill_group_category": "Soft Skills",
+        "skill_group_name": "Flexible Approach",
+        "net_per_10K_2015": -1505.02,
+        "net_per_10K_2016": -186.82,
+        "net_per_10K_2017": -1253.87,
+        "net_per_10K_2018": -96.21,
+        "net_per_10K_2019": 521.48,
+        "net_diff": 2026.5
+      },
+      {
+        "country_name": "Libya",
+        "wb_region": "Middle East & North Africa",
+        "skill_group_category": "Specialized Industry Skills",
+        "skill_group_name": "Physical Security",
+        "net_per_10K_2015": -1925.5,
+        "net_per_10K_2016": -339.16,
+        "net_per_10K_2017": -142.79,
+        "net_per_10K_2018": 257.68,
+        "net_per_10K_2019": -191.54,
+        "net_diff": 1733.96
+      },
+      {
+        "country_name": "Georgia",
+        "wb_region": "Europe & Central Asia",
+        "skill_group_category": "Business Skills",
+        "skill_group_name": "Customer Experience",
+        "net_per_10K_2015": 236.22,
+        "net_per_10K_2016": -38.81,
+        "net_per_10K_2017": -205.13,
+        "net_per_10K_2018": 781.72,
+        "net_per_10K_2019": 1901.99,
+        "net_diff": 1665.77
+      },
+      {
+        "country_name": "Gabon",
+        "wb_region": "Sub-Saharan Africa ",
+        "skill_group_category": "Specialized Industry Skills",
+        "skill_group_name": "Architecture",
+        "net_per_10K_2015": -1074.74,
+        "net_per_10K_2016": -168.38,
+        "net_per_10K_2017": -479.39,
+        "net_per_10K_2018": -46.81,
+        "net_per_10K_2019": 416.94,
+        "net_diff": 1491.68
+      },
+      {
+        "country_name": "Afghanistan",
+        "wb_region": "South Asia",
+        "skill_group_category": "Specialized Industry Skills",
+        "skill_group_name": "Aircraft Management",
+        "net_per_10K_2015": -1456.75,
+        "net_per_10K_2016": -786.09,
+        "net_per_10K_2017": -465.91,
+        "net_per_10K_2018": 29.1,
+        "net_per_10K_2019": -111.73,
+        "net_diff": 1345.02
+      },
+      {
+        "country_name": "Cuba",
+        "wb_region": "Latin America & Caribbean ",
+        "skill_group_category": "Tech Skills",
+        "skill_group_name": "Mobile Application Development",
+        "net_per_10K_2015": -3037.38,
+        "net_per_10K_2016": -1968.18,
+        "net_per_10K_2017": -1155.1,
+        "net_per_10K_2018": -1332.28,
+        "net_per_10K_2019": -1708.36,
+        "net_diff": 1329.0200000000002
+      },
+      {
+        "country_name": "Angola",
+        "wb_region": "Sub-Saharan Africa ",
+        "skill_group_category": "Soft Skills",
+        "skill_group_name": "Writing",
+        "net_per_10K_2015": -674.7,
+        "net_per_10K_2016": -374,
+        "net_per_10K_2017": 48.36,
+        "net_per_10K_2018": 611.49,
+        "net_per_10K_2019": 565.31,
+        "net_diff": 1240.01
+      },
+      {
+        "country_name": "Hong Kong SAR, China",
+        "wb_region": "East Asia & Pacific",
+        "skill_group_category": "Specialized Industry Skills",
+        "skill_group_name": "Linguistics",
+        "net_per_10K_2015": -39.94,
+        "net_per_10K_2016": 130.79,
+        "net_per_10K_2017": 28.86,
+        "net_per_10K_2018": 91.81,
+        "net_per_10K_2019": 1059.6,
+        "net_diff": 1099.54
+      },
+      {
+        "country_name": "Luxembourg",
+        "wb_region": "Europe & Central Asia",
+        "skill_group_category": "Tech Skills",
+        "skill_group_name": "Game Development",
+        "net_per_10K_2015": -198.24,
+        "net_per_10K_2016": 217.79,
+        "net_per_10K_2017": 1051.03,
+        "net_per_10K_2018": 1059.94,
+        "net_per_10K_2019": 872.05,
+        "net_diff": 1070.29
+      }
+    ]
+  }
+};
+    vegaEmbed("#vis", spec, {mode: "vega-lite"}).then(console.log).catch(console.warn);
+  </script>
+</body>
+</html>
